@@ -7,6 +7,12 @@ class Main{
 		Scanner choice = new Scanner(System.in);
 		System.out.println("Enter a number to find the reverse factorial:");
 		String to_reverse = choice.nextLine();
-		System.out.println("The reverse factorial of " + to_reverse + " is " + factorial.ReverseFactorial(Integer.parseInt(to_reverse)) + "!");
+		//Slightly different print formatting if ReverseFactorial return "NONE"
+		if(factorial.ReverseFactorial(Integer.parseInt(to_reverse)) == "NONE"){
+			System.out.println("The reverse factorial of " + to_reverse + " is " + factorial.ReverseFactorial(Integer.parseInt(to_reverse)));
+		}
+		else{
+			System.out.println("The reverse factorial of " + to_reverse + " is " + factorial.ReverseFactorial(Integer.parseInt(to_reverse)) + "!");
+		}
 	}
 }
